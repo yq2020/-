@@ -1,0 +1,150 @@
+/*第一层图片样式*/
+page{
+  background-color: #edece8;
+}
+.user_info_wrap{
+  height: 45vh;
+  background-color: var(--themeColor);
+  overflow: hidden;
+  position: relative;
+}
+.user_info_wrap .user_img_wrap{
+  position: relative;
+}
+.user_info_wrap .user_img_wrap .user_bg{
+  height: 45vh;
+  width: 100%;
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_img_wrap .user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+.user_info_wrap .user_img_wrap .user_info .user_icon{
+  width: 190rpx;
+  height: 190rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_img_wrap .user_info .user_name{
+  color: #fff;
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+/*没有用户信息的登录按钮样式*/
+.user_info_wrap .user_btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:40%;
+  
+}
+
+
+
+/*第一层组件栏样式*/
+.user_content{
+  position: relative;
+}
+.user_content .user_main{
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  color: #666;
+  padding-bottom: 70rpx;
+}
+.user_content .user_main .history_wrap{
+  background-color: #fff;
+  display: flex
+}
+.user_content .user_main .history_wrap navigator{
+    flex: 1;
+    text-align: center;
+    padding: 10rpx 0;
+}
+.user_content .user_main .history_wrap navigator .his_num{
+  color: var(--themeColor);
+}
+.user_content .user_main .history_wrap navigator .his_name{
+}
+
+/*第二层 我的订单*/
+.user_content .user_main .orders_wrap {
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.user_content .user_main .orders_wrap .orders_title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.user_content .user_main .orders_wrap .orders_content {
+  display: flex;
+}
+.user_content .user_main .orders_wrap .orders_content navigator {
+  flex: 1;
+  text-align: center;
+  padding: 15rpx 0;
+}
+.user_content .user_main .orders_wrap .orders_content navigator .iconfont {
+  color: var(--themeColor);
+  padding-bottom: 8rpx;
+}
+
+
+/*第三层 收货地址*/
+.user_content .user_main .address_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+
+/*第四层 应用信息管理*/
+.user_content .user_main .app_info_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+.user_content .user_main .app_info_wrap .app_info_contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user_content .user_main .app_info_wrap .app_info_item{
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+  /*button障眼法 要在父容器加相对定位*/
+  position: relative;
+}
+.user_content .user_main .app_info_wrap .app_info_item button{
+  /*绝对定位*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+/*第五层 推荐*/
+.user_content .user_main .recommend_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  position: relative;
+}
+.user_content .user_main .recommend_wrap button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+
+

@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/index",
+    "pages/goods_list/index",
+    "pages/goods_detail/index",
+    "pages/cart/index",
+    "pages/collect/index",
+    "pages/order/index",
+    "pages/search/index",
+    "pages/user/index",
+    "pages/feedback/index",
+    "pages/login/index",
+    "pages/auth/index",
+    "pages/pay/index"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF69B4",
+    "navigationBarTitleText": "小商场",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+  "tabBar": {
+    "color":"#999",
+    "selectedColor": "#FF69B4",
+    "backgroundColor": "",
+    "position":"bottom",
+    "borderStyle": "black",
+
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "image/shouye1.png",
+      "selectedIconPath": "image/shouye2.png"
+    },
+    {
+      "pagePath": "pages/category/index",
+      "text": "店铺",
+      "iconPath": "image/dianpu1.png",
+      "selectedIconPath": "image/dianpu2.png"
+    },
+    {
+      "pagePath": "pages/cart/index",
+      "text": "购物车",
+      "iconPath": "image/gouwuche1.png",
+      "selectedIconPath": "image/gouwuche2.png"
+    },
+    {
+      "pagePath": "pages/user/index",
+      "text": "我的",
+      "iconPath": "image/geren1.png",
+      "selectedIconPath": "image/geren2.png"
+    }
+    ]
+
+  }
+}

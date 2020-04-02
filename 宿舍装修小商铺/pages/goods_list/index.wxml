@@ -1,0 +1,26 @@
+<!--pages/goods_list/index.wxml-->
+<SearchInput></SearchInput>
+<!--监听自定义事件-->
+<Tabs tabs="{{tabs}}" bindtbasItemChange="handleTbasItemChange">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="first_tab">
+      <navigator 
+      wx:for="{{goods_list}}"
+      wx:key="goods_id"
+      class="goods_item"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+      >
+        <!-- 左侧 图片容器          -->
+          <view class="goods_img_wrap">
+            <image mode="widthFix" src="{{item.goods_small_logo?item.goods_small_logo:'//i1.hdslb.com/bfs/archive/ef1a94b4b4893011226d258e770b5a06f05b2968.jpg@412w_232h_1c_100q.jpg'}}"></image>
+          </view>
+        <!-- 右侧 图片容器        -->
+        <view class="goods_info_wrap">
+          <view class="goods_name">{{item.goods_name}}</view>
+          <view class="goods_price">{{item.goods_price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+</Tabs>
+

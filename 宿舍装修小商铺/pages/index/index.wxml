@@ -1,0 +1,78 @@
+<view class="sp_index">
+  <!--搜索框 开始-->
+  <SearchInput></SearchInput>
+  <!--搜索框 结束-->
+
+  <!--轮播图开始-->
+    <swiper class="index_swiper" autoplay indicator-dots circular>
+      <swiper-item >
+        <navigator url="/pages/category/index" open-type="switchTab">
+          <image class="index_swiper_image" mode="widthFix" src="//i0.hdslb.com/bfs/manga-static/c937a55af0a114d4f57bfe266aba3e90fac6aaa2.jpg@112w_149h_1c_100q.webp"></image>
+        </navigator>
+      </swiper-item>
+
+      <swiper-item>
+        <navigator url="/pages/category/index" open-type="switchTab">
+          <image mode="widthFix" class="index_swiper_image"src="//i0.hdslb.com/bfs/manga-static/6bcd9f23293470a962901a4fc99fdd87dce8556f.jpg@206w_275h_1c_100q.webp"></image>
+        </navigator>
+      </swiper-item>
+
+      <swiper-item>
+        <navigator url="/pages/category/index" open-type="switchTab">
+          <image mode="widthFix" class="index_swiper_image"src="//i0.hdslb.com/bfs/manga-static/ee2149da1978d88743faf7e5891f178be519539a.jpg@206w_275h_1c_100q.webp"></image>
+        </navigator>
+      </swiper-item>
+
+      <swiper-item>
+        <navigator url="/pages/category/index" open-type="switchTab">
+          <image mode="widthFix" class="index_swiper_image"src="//i0.hdslb.com/bfs/manga-static/214b88f3089e66053b60dc977b44eef9ff5c462c.jpg@206w_275h_1c_100q.webp"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  <!--轮播图结束-->
+
+  <!--导航开始-->
+  <view class="index_cate">
+    <navigator class="index_cate_navigator"
+    wx:for="{{catesList}}"
+    wx:key="name"
+    url="{{item.navigator_url}}"
+    open-type="switchTab"
+    >
+      <image class="index_cate_iamge" mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+    </view>
+  <!--导航结束-->
+
+
+
+  <!--楼层开始-->
+  <view class="index_floor">
+    <view class="floor_group"
+    wx:for="{{floorList}}"
+    wx:for-item="item1"
+    wx:for-index="index1"
+    wx:key="floor_title"
+    >
+      <!--标题-->
+      <view class="floor_title">
+        <image  src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+      <!--内容-->
+      <view class="floor_list">
+        <navigator 
+          wx:for="{{item1.product_list}}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="name"
+          url="{{item2.navigator_url}}"
+        >
+          <image  mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}">
+          </image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!--楼层结束-->
+
+</view>

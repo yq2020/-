@@ -1,0 +1,75 @@
+/**index.wxss**/
+
+/*图片大小*/
+.index_swiper_image{
+  width: 50%;  
+}
+/*轮播图容器的大小*/
+.index_swiper{
+  width: 750rpx;
+  height: 450rpx;
+  text-align: center;
+}
+
+/*导航栏样式*/
+.index_cate{
+  display: flex;
+}
+.index_cate_navigator{
+  flex: 1;
+  padding: 20rpx;
+}
+.index_cate_iamge{
+  width: 100%;
+}
+
+
+/*楼层样式*/
+.index_floor .floor_group .floor_title {
+  padding: 5rpx 0;
+}
+.index_floor .floor_group .floor_title image {
+  width: 150%;
+}
+.index_floor .floor_group .floor_list {
+  /*清除浮动*/
+  overflow: hidden;
+}
+.index_floor .floor_group .floor_list navigator {
+  float: left;
+  /*这里有点问题，本来是要三分之一的，但是超过了31%发现后面两张图排到下面去了*/
+  width: 31%;
+}
+.index_floor .floor_group .floor_list navigator image {
+  width: 100%;
+  height: 100%;
+}
+/*因为后四个图片宽高各不同 所以设置他们的高为第一张的一半
+* 第一张原图宽高为232*386
+* 232/386=33.33vw/ height
+* 第一张图片经过变化后放进程序的高 height=33.33vw*386/232
+* 则后面的四张height/2
+*/
+/*后四张图片的高*/
+.index_floor .floor_group .floor_list navigator:nth-last-child(-n+4) {
+  height: 27.72711207vw;
+  /*加个白色左边框*/
+  border-left: 10rpx solid #fff;
+}
+/*第二第三张图片加底边框*/
+.index_floor .floor_group .floor_list navigator:nth-child(2) {
+  border-bottom: 10rpx solid #fff;
+}
+.index_floor .floor_group .floor_list navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+  
+}
+.index_floor .floor_group .floor_list navigator:nth-child(5) {
+  border-bottom: 10rpx solid #fff;
+}
+.index_floor .floor_group .floor_list navigator:nth-child(4) {
+  border-bottom: 10rpx solid #fff;
+}
+.index_floor .floor_group .floor_list navigator:nth-child(1) {
+  border-left: 10rpx solid #fff;
+}
